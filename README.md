@@ -42,7 +42,7 @@ shapiro.test(resid(s)) #is parametric because p-value =0.1683
 hist(resid(s))
 qqnorm(resid(s))
 qqline(resid(s))
-# test for homogeniety of variance:
+#test for homogeniety of variance:
 bartlett.test(cvs$`% dead`~cvs$Medium) #p-value = 0.858, equal variance OK
 leveneTest(cvs$`% dead`~cvs$Medium) # equal variance OK
 
@@ -63,11 +63,11 @@ shapiro.test(resid(s)) #is parametric because p-value = 0.8447
 hist(resid(s))
 qqnorm(resid(s))
 qqline(resid(s))
-# test for homogeniety of variance:
+#test for homogeniety of variance:
 bartlett.test(D$`% dead`~D$Medium) #p-value = 0.1212, equal variance OK
 leveneTest(D$`% dead`~D$Medium) # equal variance OK
 
 t.test(D$`% dead`~D$Medium)
-# p-value = 0.334
+#p-value = 0.334
 boxplot(D$`% dead`~D$Medium)
 
